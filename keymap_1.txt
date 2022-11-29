@@ -1,6 +1,12 @@
 status	key	command
-DirectInput	Ctrl 5	IMEOn
-DirectInput	Ctrl F2	IMEOn
+DirectInput	Ctrl '	IMEOn
+DirectInput	Ctrl ;	IMEOff
+Composition	Ctrl '	IMEOn
+Composition	Ctrl ;	IMEOff
+Precomposition	Ctrl '	IMEOn
+Precomposition	Ctrl ;	IMEOff
+Conversion	Ctrl '	IMEOn
+Conversion	Ctrl ;	IMEOff
 Composition	Backspace	Backspace
 Composition	Ctrl Backspace	Backspace
 Composition	Ctrl h	Backspace
@@ -142,6 +148,12 @@ Conversion	Eisu	ToggleAlphanumericMode
 Precomposition	Eisu	ToggleAlphanumericMode
 Precomposition	Shift Muhenkan	ToggleAlphanumericMode
 Precomposition	Ctrl Backspace	Undo
+Composition	Ctrl [	InputModeHiragana
+Composition	Ctrl ]	InputModeFullKatakana
+Precomposition	Ctrl [	InputModeHiragana
+Precomposition	Ctrl ]	InputModeFullKatakana
+DirectInput	Ctrl [	InputModeHiragana
+DirectInput	Ctrl ]	InputModeFullKatakana
 Composition	ASCII	InsertCharacter
 Composition	Kanji	IMEOff
 Composition	OFF	IMEOff
