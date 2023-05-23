@@ -1,15 +1,10 @@
 status	key	command
-DirectInput	Ctrl '	IMEOn
 DirectInput	Ctrl ;	IMEOff
-Composition	Ctrl '	IMEOn
 Composition	Ctrl ;	IMEOff
-Precomposition	Ctrl '	IMEOn
 Precomposition	Ctrl ;	IMEOff
-Conversion	Ctrl '	IMEOn
 Conversion	Ctrl ;	IMEOff
 Composition	Backspace	Backspace
 Composition	Ctrl Backspace	Backspace
-Composition	Ctrl h	Backspace
 Composition	Shift Backspace	Backspace
 Composition	Ctrl z	Cancel
 Composition	ESC	Cancel
@@ -17,7 +12,6 @@ Composition	Shift ESC	Cancel
 Conversion	Backspace	Cancel
 Conversion	Ctrl Backspace	Cancel
 Conversion	Ctrl g	Cancel
-Conversion	Ctrl h	Cancel
 Conversion	Ctrl z	Cancel
 Conversion	Delete	Cancel
 Conversion	ESC	Cancel
@@ -25,11 +19,9 @@ Conversion	Shift Backspace	Cancel
 Conversion	Shift ESC	Cancel
 Precomposition	Backspace	Revert
 Composition	Ctrl Enter	Commit
-Composition	Ctrl m	Commit
 Composition	Enter	Commit
 Composition	VirtualEnter	Commit
 Conversion	Ctrl Enter	Commit
-Conversion	Ctrl m	Commit
 Conversion	Enter	Commit
 Suggestion	Shift Enter	CommitFirstSuggestion
 Conversion	Ctrl Down	CommitOnlyFirstSegment
@@ -53,10 +45,12 @@ Composition	F8	ConvertToHalfWidth
 Conversion	Ctrl o	ConvertToHalfWidth
 Conversion	F8	ConvertToHalfWidth
 Composition	Ctrl t	ConvertToHalfAlphanumeric
-Composition	Ctrl j	ConvertToHalfAlphanumeric
+Composition	Ctrl [	ConvertToHalfAlphanumeric
+Composition	Ctrl h	ConvertToHalfAlphanumeric
 Composition	F10	ConvertToHalfAlphanumeric
 Conversion	Ctrl t	ConvertToHalfAlphanumeric
-Conversion	Ctrl j	ConvertToHalfAlphanumeric
+Conversion	Ctrl [	ConvertToHalfAlphanumeric
+Conversion	Ctrl h	ConvertToHalfAlphanumeric
 Conversion	F10	ConvertToHalfAlphanumeric
 Composition	Ctrl u	ConvertToHiragana
 Composition	F6	ConvertToHiragana
@@ -150,11 +144,14 @@ Conversion	Eisu	ToggleAlphanumericMode
 Precomposition	Eisu	ToggleAlphanumericMode
 Precomposition	Shift Muhenkan	ToggleAlphanumericMode
 Precomposition	Ctrl Backspace	Undo
-Composition	Ctrl [	InputModeHiragana
+Composition	Ctrl '	InputModeHiragana
+Composition	Ctrl m	InputModeFullKatakana
 Composition	Ctrl ]	InputModeFullKatakana
-Precomposition	Ctrl [	InputModeHiragana
+Precomposition	Ctrl '	InputModeHiragana
+Precomposition	Ctrl m	InputModeFullKatakana
 Precomposition	Ctrl ]	InputModeFullKatakana
-DirectInput	Ctrl [	InputModeHiragana
+DirectInput	Ctrl '	InputModeHiragana
+DirectInput	Ctrl m	InputModeFullKatakana
 DirectInput	Ctrl ]	InputModeFullKatakana
 Composition	ASCII	InsertCharacter
 Composition	Kanji	IMEOff
