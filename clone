@@ -1,63 +1,18 @@
 status	key	command
-
-
-DirectInput	Ctrl '	InputModeHiragana
-
-Composition	Ctrl '	InputModeHiragana
-Conversion	Ctrl '	InputModeHiragana
-Composition	Ctrl h	ConvertToHiragana
-Conversion	Ctrl h	ConvertToHiragana
-
-Composition	Ctrl m	InputModeFullKatakana
-Conversion	Ctrl m	InputModeFullKatakana
-Composition	Ctrl n	ConvertToFullKatakana
-Conversion	Ctrl n	ConvertToFullKatakana
-
-Composition	Ctrl t	InputModeHalfAlphanumeric
-Conversion	Ctrl t	InputModeHalfAlphanumeric
-Composition	Ctrl r	ConvertToHalfAlphanumeric
-Conversion	Ctrl r	ConvertToHalfAlphanumeric
-
-Composition	Ctrl i	Commit
-Conversion	Ctrl i	Commit
-Suggestion	Ctrl i	Commit
-
-Composition	Ctrl j	PredictAndConvert
-Conversion	Ctrl j	PredictAndConvert
-Suggestion	Ctrl j	PredictAndConvert
-
-Composition	Ctrl ;	IMEOff
-Conversion	Ctrl ;	IMEOff
 DirectInput	Ctrl ;	IMEOff
+Composition	Ctrl ;	IMEOff
 Precomposition	Ctrl ;	IMEOff
-
-
-Conversion	Ctrl v	Reconvert
-Composition	Ctrl v	Reconvert
-Suggestion	Ctrl v	Reconvert
-
-Conversion	Ctrl g	Cancel
-Composition	Ctrl g	Cancel
-Suggestion	Ctrl g	Cancel
-
-Conversion	Ctrl z	Undo
-Composition	Ctrl z	Undo
-Suggestion	Ctrl z	Undo
-
-
-
-
-
-
-
-
+Conversion	Ctrl ;	IMEOff
 Composition	Backspace	Backspace
 Composition	Ctrl Backspace	Backspace
 Composition	Shift Backspace	Backspace
+Composition	Ctrl z	Cancel
 Composition	ESC	Cancel
 Composition	Shift ESC	Cancel
 Conversion	Backspace	Cancel
 Conversion	Ctrl Backspace	Cancel
+Conversion	Ctrl g	Cancel
+Conversion	Ctrl z	Cancel
 Conversion	Delete	Cancel
 Conversion	ESC	Cancel
 Conversion	Shift Backspace	Cancel
@@ -73,29 +28,39 @@ Conversion	VirtualEnter	CommitOnlyFirstSegment
 Composition	Henkan	Convert
 Composition	Shift Space	Convert
 Composition	Space	Convert
+Composition	Ctrl p	ConvertToAlphanumeric
 Composition	F9	ConvertToAlphanumeric
 Composition	Shift Muhenkan	ConvertToFullAlphanumeric
+Conversion	Ctrl p	ConvertToFullAlphanumeric
 Conversion	F9	ConvertToFullAlphanumeric
 Conversion	Shift Muhenkan	ConvertToFullAlphanumeric
 
+Composition	Ctrl m	InputModeFullKatakana
+Conversion	Ctrl m	ConvertToFullKatakana
+Composition	Ctrl h	ConvertToFullKatakana
 
+Conversion	Ctrl h	ConvertToHiragana
 Composition	F7	ConvertToFullKatakana
 Conversion	F7	ConvertToFullKatakana
 Composition	Ctrl o	ConvertToHalfWidth
 Composition	F8	ConvertToHalfWidth
 Conversion	Ctrl o	ConvertToHalfWidth
 Conversion	F8	ConvertToHalfWidth
+Composition	Ctrl t	ConvertToHalfAlphanumeric
 Composition	Ctrl [	ConvertToHalfAlphanumeric
 Composition	F10	ConvertToHalfAlphanumeric
+Conversion	Ctrl t	ConvertToHalfAlphanumeric
 Conversion	Ctrl [	ConvertToHalfAlphanumeric
 Conversion	F10	ConvertToHalfAlphanumeric
 Composition	F6	ConvertToHiragana
+Conversion	Ctrl '	ConvertToHiragana
 Conversion	F6	ConvertToHiragana
 Composition	F2	ConvertWithoutHistory
 Composition	Hankaku/Zenkaku	IMEOff
 Conversion	Hankaku/Zenkaku	IMEOff
 DirectInput	Ctrl F9	IMEOff
 Precomposition	Hankaku/Zenkaku	IMEOff
+Composition	Ctrl g	Delete
 Composition	Delete	Delete
 Conversion	Ctrl l	SegmentWidthExpand
 Conversion	Shift Right	SegmentWidthExpand
@@ -105,8 +70,12 @@ Composition	Ctrl Shift Space	InsertFullSpace
 Conversion	Ctrl Shift Space	InsertFullSpace
 Precomposition	Ctrl Shift Space	InsertFullSpace
 Composition	Ctrl Space	InsertHalfSpace
+Composition	Ctrl i	InputModeHalfAlphanumeric
+Conversion	Ctrl i	ConvertToHalfAlphanumeric
 Conversion	Ctrl Space	InsertHalfSpace
 Precomposition	Space	InsertSpace
+Precomposition	Ctrl i	InsertSpace
+Composition	Ctrl k	MoveCursorLeft
 Composition	Ctrl s	MoveCursorLeft
 Composition	Left	MoveCursorLeft
 Composition	Shift Left	MoveCursorLeft
@@ -166,6 +135,7 @@ Conversion	Ctrl Shift Right	InputModeHiragana
 DirectInput	Ctrl F8	InputModeHiragana
 Precomposition	Hiragana	InputModeHiragana
 Precomposition	Muhenkan	InputModeSwitchKanaType
+Conversion	Ctrl k	SegmentWidthShrink
 Conversion	Shift Left	SegmentWidthShrink
 Conversion	VirtualLeft	SegmentWidthShrink
 Composition	Ctrl Shift End	SwitchKanaType
@@ -175,8 +145,13 @@ Conversion	Eisu	ToggleAlphanumericMode
 Precomposition	Eisu	ToggleAlphanumericMode
 Precomposition	Shift Muhenkan	ToggleAlphanumericMode
 Precomposition	Ctrl Backspace	Undo
+Composition	Ctrl '	ConvertToHiragana
 Composition	Ctrl ]	InputModeFullKatakana
+Precomposition	Ctrl '	InputModeHiragana
+Precomposition	Ctrl m	InputModeFullKatakana
 Precomposition	Ctrl ]	InputModeFullKatakana
+DirectInput	Ctrl '	InputModeHiragana
+DirectInput	Ctrl m	InputModeFullKatakana
 DirectInput	Ctrl ]	InputModeFullKatakana
 Composition	ASCII	InsertCharacter
 Composition	Kanji	IMEOff
