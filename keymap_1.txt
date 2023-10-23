@@ -2,6 +2,9 @@ status	key	command
 
 
 DirectInput	Ctrl '	InputModeHiragana
+Precomposition	Ctrl '	InputModeHiragana
+DirectInput	Ctrl m	InputModeFullKatakana
+Precomposition	Ctrl m	InputModeFullKatakana
 
 Composition	Ctrl '	InputModeHiragana
 Conversion	Ctrl '	InputModeHiragana
@@ -27,9 +30,13 @@ Conversion	Ctrl j	PredictAndConvert
 Suggestion	Ctrl j	PredictAndConvert
 
 Composition	Ctrl ;	IMEOff
+Composition	Ctrl e	IMEOff
 Conversion	Ctrl ;	IMEOff
+Conversion	Ctrl e	IMEOff
 DirectInput	Ctrl ;	IMEOff
+DirectInput	Ctrl e	IMEOff
 Precomposition	Ctrl ;	IMEOff
+Precomposition	Ctrl e	IMEOff
 
 
 Conversion	Ctrl v	Reconvert
@@ -39,6 +46,8 @@ Suggestion	Ctrl v	Reconvert
 Conversion	Ctrl g	Cancel
 Composition	Ctrl g	Cancel
 Suggestion	Ctrl g	Cancel
+Precomposition	Ctrl g	Cancel
+DirectInput	Ctrl g	Cancel
 
 Conversion	Ctrl z	Undo
 Composition	Ctrl z	Undo
@@ -117,7 +126,6 @@ Composition	Right	MoveCursorRight
 Composition	Shift Right	MoveCursorRight
 Composition	VirtualRight	MoveCursorRight
 Composition	Ctrl a	MoveCursorToBeginning
-Composition	Ctrl e	MoveCursorToBeginning
 Composition	Ctrl Left	MoveCursorToBeginning
 Composition	Ctrl Up	MoveCursorToBeginning
 Composition	Home	MoveCursorToBeginning
@@ -149,7 +157,6 @@ Conversion	Henkan	ConvertNext
 Conversion	Space	ConvertNext
 Conversion	PageDown	ConvertNextPage
 Conversion	Shift Down	ConvertNextPage
-Conversion	Ctrl e	ConvertPrev
 Conversion	Ctrl Up	ConvertPrev
 Conversion	Shift Henkan	ConvertPrev
 Conversion	Shift Space	ConvertPrev
