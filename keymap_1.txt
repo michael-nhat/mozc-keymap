@@ -29,15 +29,12 @@ Composition	Ctrl j	PredictAndConvert
 Conversion	Ctrl j	PredictAndConvert
 Suggestion	Ctrl j	PredictAndConvert
 
-Composition	Ctrl ;	IMEOff
-Composition	Ctrl e	IMEOff
-Conversion	Ctrl ;	IMEOff
-Conversion	Ctrl e	IMEOff
-DirectInput	Ctrl ;	IMEOff
-DirectInput	Ctrl e	IMEOff
-Precomposition	Ctrl ;	IMEOff
-Precomposition	Ctrl e	IMEOff
-
+Precomposition	Space	InsertSpace
+Conversion	Space	InsertSpace
+Composition	Space	InsertSpace
+Suggestion	Space	InsertSpace
+Precomposition	Space	InsertSpace
+DirectInput	Space	InsertSpace
 
 Conversion	Ctrl v	Reconvert
 Composition	Ctrl v	Reconvert
@@ -81,7 +78,6 @@ Conversion	Ctrl Down	CommitOnlyFirstSegment
 Conversion	VirtualEnter	CommitOnlyFirstSegment
 Composition	Henkan	Convert
 Composition	Shift Space	Convert
-Composition	Space	Convert
 Composition	F9	ConvertToAlphanumeric
 Composition	Shift Muhenkan	ConvertToFullAlphanumeric
 Conversion	F9	ConvertToFullAlphanumeric
@@ -115,7 +111,6 @@ Conversion	Ctrl Shift Space	InsertFullSpace
 Precomposition	Ctrl Shift Space	InsertFullSpace
 Composition	Ctrl Space	InsertHalfSpace
 Conversion	Ctrl Space	InsertHalfSpace
-Precomposition	Space	InsertSpace
 Composition	Ctrl s	MoveCursorLeft
 Composition	Left	MoveCursorLeft
 Composition	Shift Left	MoveCursorLeft
@@ -154,7 +149,6 @@ Prediction	Ctrl Delete	DeleteSelectedCandidate
 Conversion	Ctrl x	ConvertNext
 Conversion	Down	ConvertNext
 Conversion	Henkan	ConvertNext
-Conversion	Space	ConvertNext
 Conversion	PageDown	ConvertNextPage
 Conversion	Shift Down	ConvertNextPage
 Conversion	Ctrl Up	ConvertPrev
